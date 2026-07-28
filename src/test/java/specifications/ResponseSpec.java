@@ -4,7 +4,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 
-public class ResponseSpecification {
+public class ResponseSpec {
 	
 	public static io.restassured.specification.ResponseSpecification responseSpec(int statuscode) {
 		return new ResponseSpecBuilder()
