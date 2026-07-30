@@ -5,6 +5,7 @@ import java.util.List;
 public class EmployeeGetResponse {
 	private String status;
 	private List<EmployeeData>data;
+	private String message;
 	
 	public void setStatus(String status) {
 		this.status = status;
@@ -20,6 +21,14 @@ public class EmployeeGetResponse {
 	
 	public List<EmployeeData> getData() {
 		return data;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }
