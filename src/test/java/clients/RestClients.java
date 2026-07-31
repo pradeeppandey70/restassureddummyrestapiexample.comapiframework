@@ -27,7 +27,7 @@ public class RestClients {
 	public Response putRequest(Object body, String path, int statusCode) {
 		return RestAssured.given().spec(ReqSpec.requestSpec()).
 				body(body).when().
-				post(path).then().
+				put(path).then().
 				spec(ResponseSpec.responseSpec(statusCode)).
 				extract().response();
 

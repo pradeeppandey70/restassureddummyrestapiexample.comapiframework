@@ -12,19 +12,19 @@ public class EmployeeServices {
 	private static final String EMPLOYEES = "/employees";
 	private static final String DELETE = "/delete/";
 	public Response createEmployee(CreateEmployees request) {
-		return clients.postRequest(request, CREATE, 201);	
+		return clients.postRequest(request, CREATE, 200);	
 	}
 	
-	public Response GetEmployee(String id) {
-		return clients.getRequest(EMPLOYEE + id, 200);	
+	public Response GetEmployee(int i) {
+		return clients.getRequest(EMPLOYEE + i, 200);	
 	}
 
 	public Response GetAllEmployee() {
 		return clients.getRequest(EMPLOYEES, 200);	
 	}
 	
-	public Response updateEmployee(CreateEmployees request, String id) {
-		return clients.putRequest(request, UPDATE + id, 201);	
+	public Response updateEmployee(CreateEmployees request, int i) {
+		return clients.putRequest(request, UPDATE + i, 200);	
 	}
 	
 	public Response deleteEmployee(String id) {

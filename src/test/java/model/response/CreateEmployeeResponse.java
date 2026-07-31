@@ -1,26 +1,25 @@
 package model.response;
 
-import java.util.List;
-
-public class EmployeeGetResponse {
-	private String status;
-	private List<EmployeeData>data;
-	private String message;
+public class CreateEmployeeResponse {
 	
-	public void setStatus(String status) {
-		this.status = status;
-	}
+	private String status;
+	private CreateEmployeeData data;
+	private String message;
 	
 	public String getStatus() {
 		return status;
 	}
 	
-	public void setData(List<EmployeeData> data) {
-		this.data = data;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
-	public List<EmployeeData> getData() {
+	public CreateEmployeeData getData() {
 		return data;
+	}
+	
+	public void setData(CreateEmployeeData data) {
+		this.data = data;
 	}
 
 	public String getMessage() {
@@ -30,5 +29,7 @@ public class EmployeeGetResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+	
+	
 
 }

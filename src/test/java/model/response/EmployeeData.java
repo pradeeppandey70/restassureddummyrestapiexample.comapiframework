@@ -2,17 +2,17 @@ package model.response;
 
 public class EmployeeData {
 	
-	private String id;
+	private int id;
 	private String employee_name;
 	private String employee_salary;
 	private String employee_age;
 	private String profile_image;
 	
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	
