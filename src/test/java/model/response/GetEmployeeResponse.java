@@ -2,7 +2,7 @@ package model.response;
 
 public class GetEmployeeResponse {
 	private String status;
-	private EmployeeData data;
+	private EmployeesData data;
 	private String message;
 	
 	public String getStatus() {
@@ -13,11 +13,11 @@ public class GetEmployeeResponse {
 		this.status = status;
 	}
 	
-	public EmployeeData getData() {
+	public EmployeesData getData() {
 		return data;
 	}
 	
-	public void setData(EmployeeData data) {
+	public void setData(EmployeesData data) {
 		this.data = data;
 	}
 

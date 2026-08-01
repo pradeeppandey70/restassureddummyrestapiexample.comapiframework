@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.Employees">
         <methods>
-          <include name="updateEmployee"/>
+          <include name="createEmployee"/>
         </methods>
       </class> <!-- tests.Employees -->
     </classes>

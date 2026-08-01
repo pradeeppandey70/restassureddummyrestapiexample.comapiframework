@@ -2,7 +2,7 @@ package apiservices;
 
 import clients.RestClients;
 import io.restassured.response.Response;
-import model.requests.CreateEmployees;
+import model.requests.EmployeeRequest;
 
 public class EmployeeServices {
 	private final RestClients clients = new RestClients();
@@ -11,7 +11,7 @@ public class EmployeeServices {
 	private static final String EMPLOYEE = "/employee/";
 	private static final String EMPLOYEES = "/employees";
 	private static final String DELETE = "/delete/";
-	public Response createEmployee(CreateEmployees request) {
+	public Response createEmployee(EmployeeRequest request) {
 		return clients.postRequest(request, CREATE, 200);	
 	}
 	
@@ -23,7 +23,7 @@ public class EmployeeServices {
 		return clients.getRequest(EMPLOYEES, 200);	
 	}
 	
-	public Response updateEmployee(CreateEmployees request, int i) {
+	public Response updateEmployee(EmployeeRequest request, int i) {
 		return clients.putRequest(request, UPDATE + i, 200);	
 	}
 	

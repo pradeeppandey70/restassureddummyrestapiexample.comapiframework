@@ -4,7 +4,7 @@ import java.util.List;
 
 public class getAllEmployeesResponse {
 	private String status;
-	private List<EmployeeData>data;
+	private List<EmployeesData>data;
 	private String message;
 	
 	public void setStatus(String status) {
@@ -15,11 +15,11 @@ public class getAllEmployeesResponse {
 		return status;
 	}
 	
-	public void setData(List<EmployeeData> data) {
+	public void setData(List<EmployeesData> data) {
 		this.data = data;
 	}
 	
-	public List<EmployeeData> getData() {
+	public List<EmployeesData> getData() {
 		return data;
 	}
 

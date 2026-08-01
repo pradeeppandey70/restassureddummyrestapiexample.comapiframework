@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 import apiservices.EmployeeServices;
 import io.restassured.response.Response;
-import model.requests.CreateEmployees;
-import model.response.CreateEmployeeResponse;
+import model.requests.EmployeeRequest;
+import model.response.EmployeeResponse;
 import model.response.GetEmployeeResponse;
 import model.response.getAllEmployeesResponse;
 
@@ -25,19 +25,19 @@ public class Employees {
 	}
 	
 	@Test
-	public int createEmployee(){
-		CreateEmployees data = new CreateEmployees();
-		data.setName("Test User");
+	public void createEmployee(){
+		EmployeeRequest data = new EmployeeRequest();
+		data.setName("Test User1");
 		data.setAge("32");
 		data.setSalary("40000");
 		Response response = services.createEmployee(data);
 		
-		CreateEmployeeResponse prd = response.as(CreateEmployeeResponse.class);
+		EmployeeResponse prd = response.as(EmployeeResponse.class);
 		int id = prd.getData().getId();
 		Assert.assertNotNull(prd.getData().getId());
-		Assert.assertEquals(prd.getData().getName(),"Test User");
+		Assert.assertEquals(prd.getData().getName(),"Test User1");
 		Assert.assertEquals(prd.getStatus(), "success");
-		return id;
+		//return id;
 		
 		
 	}
@@ -52,12 +52,12 @@ public class Employees {
 	
 	@Test
 	public void updateEmployee() {
-		CreateEmployees data = new CreateEmployees();
+		EmployeeRequest data = new EmployeeRequest();
 		data.setName("User Test");
 		data.setAge("32");
 		data.setSalary("40000");
 		Response response = services.updateEmployee(data, 1);
-		CreateEmployeeResponse uer = response.as(CreateEmployeeResponse.class);
+		EmployeeResponse uer = response.as(EmployeeResponse.class);
 		Assert.assertEquals(uer.getData().getName(), "User Test");
 		//Assert.assertEquals(uer.getData().getId(), 1);
 		//need to create a separate pojo response class

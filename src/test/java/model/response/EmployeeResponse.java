@@ -1,9 +1,9 @@
 package model.response;
 
-public class CreateEmployeeResponse {
+public class EmployeeResponse {
 	
 	private String status;
-	private CreateEmployeeData data;
+	private EmployeeData data;
 	private String message;
 	
 	public String getStatus() {
@@ -14,11 +14,11 @@ public class CreateEmployeeResponse {
 		this.status = status;
 	}
 	
-	public CreateEmployeeData getData() {
+	public EmployeeData getData() {
 		return data;
 	}
 	
-	public void setData(CreateEmployeeData data) {
+	public void setData(EmployeeData data) {
 		this.data = data;
 	}
 
