@@ -1,10 +1,14 @@
 package tests;
 
+import java.sql.SQLException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import apiservices.EmployeeServices;
+import database.EmployeeRepository;
 import io.restassured.response.Response;
+import model.database.Employee;
 import model.requests.EmployeeRequest;
 import model.response.DeleteResponse;
 import model.response.EmployeeResponse;
@@ -16,7 +20,7 @@ public class EmployeeFlow {
 	EmployeeServices services = new EmployeeServices();
 	
 	@Test
-	public void employeeFlowTest() {
+	public void employeeFlowTest() throws SQLException {
 		EmployeeRequest data = new EmployeeRequest();
 		data.setName("Test User2");
 		data.setAge("45");
@@ -25,7 +29,9 @@ public class EmployeeFlow {
 		
 		EmployeeResponse prd = response.as(EmployeeResponse.class);
 		int id = prd.getData().getId();
+		Employee dbEmployee = new EmployeeRepository().getEmployee(id);
 		Assert.assertNotNull(id);
+		//Assert.assertEquals(dbEmployee.getName(), prd.getData().getName()); db - api validation step
 		Assert.assertEquals(prd.getData().getName(),"Test User2");
 		
 		Response getResponse  = services.GetEmployee(id);
