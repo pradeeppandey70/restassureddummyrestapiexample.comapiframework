@@ -27,7 +27,7 @@ public class EmployeeServices {
 		return clients.putRequest(request, UPDATE + i, 200);	
 	}
 	
-	public Response deleteEmployee(String id) {
+	public Response deleteEmployee(int id) {
 		return clients.deleteRequest(DELETE + id, 204);	
 	}
 	

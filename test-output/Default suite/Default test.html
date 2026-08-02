@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 01 23:21:58 IST 2026</td>
+<td>Started on:</td><td>Sun Aug 02 21:34:24 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3332 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5954 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,7 +76,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Employees.createEmployee()'><b>createEmployee</b><br>Test class: tests.Employees</td>
+<td title='tests.EmployeeFlow.employeeFlowTest()'><b>employeeFlowTest</b><br>Test class: tests.EmployeeFlow</td>
 <td><div><pre>java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;429&gt;.
 
@@ -85,9 +85,9 @@ Expected status code &lt;200&gt; but was &lt;429&gt;.
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
 	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at clients.RestClients.postRequest(RestClients.java:14)
-	at apiservices.EmployeeServices.createEmployee(EmployeeServices.java:15)
-	at tests.Employees.createEmployee(Employees.java:33)
+	at clients.RestClients.getRequest(RestClients.java:22)
+	at apiservices.EmployeeServices.GetEmployee(EmployeeServices.java:19)
+	at tests.EmployeeFlow.employeeFlowTest(EmployeeFlow.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -114,8 +114,8 @@ Expected status code &lt;200&gt; but was &lt;429&gt;.
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1108730163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1108730163'><pre>java.lang.AssertionError: 1 expectation failed.
+</pre></div><a href='#' onClick='toggleBox("stack-trace575779772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace575779772'><pre>java.lang.AssertionError: 1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;429&gt;.
 
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
@@ -123,9 +123,9 @@ Expected status code &lt;200&gt; but was &lt;429&gt;.
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
 	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at clients.RestClients.postRequest(RestClients.java:14)
-	at apiservices.EmployeeServices.createEmployee(EmployeeServices.java:15)
-	at tests.Employees.createEmployee(Employees.java:33)
+	at clients.RestClients.getRequest(RestClients.java:22)
+	at apiservices.EmployeeServices.GetEmployee(EmployeeServices.java:19)
+	at tests.EmployeeFlow.employeeFlowTest(EmployeeFlow.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -153,8 +153,8 @@ Expected status code &lt;200&gt; but was &lt;429&gt;.
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>3</td>
-<td>tests.Employees@1bd4fdd</td></tr>
+<td>5</td>
+<td>tests.EmployeeFlow@2f9f7dcf</td></tr>
 </table><p>
 </body>
 </html>

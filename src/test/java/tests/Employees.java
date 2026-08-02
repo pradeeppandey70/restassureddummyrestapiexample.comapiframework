@@ -33,7 +33,6 @@ public class Employees {
 		Response response = services.createEmployee(data);
 		
 		EmployeeResponse prd = response.as(EmployeeResponse.class);
-		int id = prd.getData().getId();
 		Assert.assertNotNull(prd.getData().getId());
 		Assert.assertEquals(prd.getData().getName(),"Test User1");
 		Assert.assertEquals(prd.getStatus(), "success");
